@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Background Demo</title>
+  <style>
+    body {
+      background-color: orange;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: sans-serif;
+    }
+
+
+    .demo {
+      width: 90%;
+      height: 90%;
+      border: 5px solid #fff;
+      margin: 10px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.5rem;
+      text-shadow: 1px 1px 2px #000;
+    }
+
+    .no-repeat {
+      background: url("https://picsum.photos/seed/abc123/600/400") no-repeat center/cover;
+      /* background-image: linear-gradient(to top right,green,yellow,orange,red,blue); */
+      /* background-image: linear-gradient(to right,rgba(255,0,0,0),rgba(255,0,0,1)); */
+      /* background-image: radial-gradient(red, yellow,blue); */
+      /* background-image: conic-gradient(red, yellow,blue); */
+      background-image: repeating-conic-gradient(red, yellow,blue);
+      border-radius: 50%;
+    }
+
+    .repeat-x {
+      background: url("https://picsum.photos/seed/xyz789/200/200") repeat-x;
+    }
+
+    .repeat-y {
+      background: url("https://picsum.photos/seed/lmn456/200/200") repeat-y;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo no-repeat">No Repeat</div>
+  <div class="demo repeat-x">Repeat-X</div>
+  <div class="demo repeat-y">Repeat-Y</div>
+</body>
+</html>
