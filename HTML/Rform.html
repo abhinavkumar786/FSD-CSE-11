@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admission Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        label {
+            display: inline-block;
+            width: 150px;
+            margin-bottom: 10px;
+        }
+        input, select {
+            padding: 5px;
+            margin-bottom: 15px;
+            width: calc(100% - 160px);
+        }
+        input[type="submit"] {
+            width: auto;
+            padding: 10px 20px;
+            background: #007BFF;
+            border: none;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>ABES</h1>
+    <h2>Engineering College</h2>
+    <br>
+    <h2>ONLINE STUDENT INFORMATION</h2>
+
+    <form action="/action.php" method="post">
+        <!-- Main Course -->
+        <label for="course">Main Course*</label>
+        <select id="course" name="course" required>
+            <option value="Btech">B.Tech</option>
+            <option value="Btech-wp">B.Tech (WP)</option>
+            <option value="Mtech">M.Tech</option>
+            <option value="MCA">MCA</option>
+        </select>
+        <br>
+
+        <!-- Name -->
+        <label for="name">Name*</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        <br>
+
+        <!-- Father's Name -->
+        <label for="father">Father's Name*</label>
+        <input type="text" id="father" name="father" placeholder="Enter father's name" required>
+        <br>
+
+        <!-- Mobile -->
+        <label for="mobile">Mobile*</label>
+        <input type="tel" id="mobile" name="mobile" placeholder="Enter mobile number" required>
+        <br>
+
+        <!-- Email -->
+        <label for="email">Email ID*</label>
+        <input type="email" id="email" name="email" placeholder="Enter email address" required>
+        <br>
+
+        <!-- OTP -->
+        <label for="otp">OTP*</label>
+        <input type="text" id="otp" name="otp" placeholder="Enter OTP" required>
+        <br>
+
+        <!-- Verify / Resend (as buttons instead of text inputs) -->
+        <label></label>
+        <button type="button">Verify</button>
+        <button type="button">Resend</button>
+        <br><br>
+
+        <!-- Password -->
+        <label for="password">Enter Password*</label>
+        <input type="password" id="password" name="password" placeholder="Enter password" required>
+        <br>
+
+        <!-- Re-type Password -->
+        <label for="repassword">Re-type Password*</label>
+        <input type="password" id="repassword" name="repassword" placeholder="Re-enter password" required>
+        <br>
+
+        <!-- Submit -->
+        <label></label>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
