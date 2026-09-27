@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>4 Colored Containers</title>
+  <style>
+    :root{
+      --gap: 16px;
+      --box-min: 160px;
+    }
+
+    /* page layout */
+    body{
+      margin:0;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: #f5f7fb;
+      padding:40px;
+      height: 1500px;
+    }
+
+    .wrap{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(var(--box-min), 1fr));
+      gap: var(--gap);
+      width: min(900px, 98%);
+    }
+
+    .box{
+      aspect-ratio: 4 / 3;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color: white;
+      font-size: clamp(16px, 2.5vw, 20px);
+      font-weight:700;
+      border-radius:12px;
+      box-shadow: 0 8px 20px rgba(20,30,60,0.08);
+      transition: transform 180ms ease, box-shadow 180ms ease;
+      user-select: none;
+    }
+
+    .box:hover{
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 18px 40px rgba(20,30,60,0.12);
+    }
+
+    /* four colors */
+    .c1{ background: linear-gradient(135deg,#ff6b6b,#ff8787);} /* coral red */
+    .c2{ background: linear-gradient(135deg,#4dabf7,#1c7ed6);} /* blue */
+    .c3{ background: linear-gradient(135deg,#63e6be,#20c997);} /* green */
+    .c4{ background: linear-gradient(135deg,#ffd43b,#ffc107);} /* yellow */
+
+    /* label */
+    .label{
+      text-transform:uppercase;
+      letter-spacing:0.08em;
+      font-size:0.85em;
+      opacity:0.95;
+    }
+
+    /* small-screen tweak */
+    @media (max-width:420px){
+      :root{--gap:12px}
+      .box{border-radius:10px}
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="box c1"><span class="label">Container 1</span></div>
+    <div class="box c2"><span class="label">Container 2</span></div>
+    <div class="box c3"><span class="label">Container 3</span></div>
+    <div class="box c4"><span class="label">Container 4</span></div>
+  </main>
+</body>
+</html>
